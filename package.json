@@ -1,7 +1,8 @@
 {
   "name": "minimal-react-boilerplate",
   "version": "1.0.0",
-  "description": "A minimal react boilerplate",
+  "sideEffects": false,
+  "description": "A minimal react boilerplate with webpack, babel and sass support.",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --mode development --open --hot",
@@ -13,6 +14,9 @@
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
+  },
+  "repository": {
+    "url": "https://github.com/rishichawda/minimal-react-boilerplate"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
