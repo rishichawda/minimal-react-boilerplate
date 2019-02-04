@@ -1,11 +1,16 @@
 ## minimal-react-boilerplate
 
+![](https://img.shields.io/github/languages/code-size/rishichawda/minimal-react-boilerplate.svg?style=for-the-badge)
+![](https://img.shields.io/david/rishichawda/minimal-react-boilerplate.svg?style=for-the-badge)
+![](https://img.shields.io/david/dev/rishichawda/minimal-react-boilerplate.svg?style=for-the-badge)
+
 A minimal react boilerplate with webpack 4, babel v7 and sass support.
 
 * Webpack 4
 * Babel 7
 * ESLint ( with prettier config :tada: ) - give the configuration a shot and thank me later. And [Dan Abramov](https://github.com/gaearon) too - since I got the idea from him.
 * SASS support.
+
 
 ## Usage :
 
