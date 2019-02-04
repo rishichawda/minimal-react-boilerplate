@@ -7,6 +7,7 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --mode development --open --hot",
     "build": "cross-env NODE_ENV=production webpack -p --config webpack.prod.js",
+    "lint": "eslint ./ --fix && echo \"No eslint errors!\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "rishichawda",
