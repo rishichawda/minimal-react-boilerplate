@@ -6,10 +6,29 @@
 
 A minimal react boilerplate with webpack 4, babel v7 and sass support.
 
-* Webpack 4
-* Babel 7
+* All the good things from Webpack 4 including faster builds.
+* Babel 7.
 * ESLint ( with prettier config :tada: ) - give the configuration a shot and thank me later. And [Dan Abramov](https://github.com/gaearon) too - since I got the idea from him.
+
+  This also means no unnecessary semi-colons in your files! 
 * SASS support.
+* Easy and cleaner imports.
+  
+  For example, if you have a directory structure like this: 
+  ```
+  src
+  -- components
+  -- config
+  ---- secret-config.js
+  -- pages
+  ---- home
+  ------ index.js
+  ```
+  
+  You can import `secret-config.js` in `index.js` as :
+  ```jsx
+  import config from 'config/secret-config.js';
+  ```
 
 
 ## Usage :
