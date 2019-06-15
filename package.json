@@ -4,8 +4,8 @@
   "description": "A minimal react boilerplate with webpack, babel and sass support.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js --mode development --open --hot",
-    "build": "cross-env NODE_ENV=production webpack -p --config webpack.prod.js",
+    "start": "webpack-dev-server --config ./config/webpack/webpack.dev.js --mode development --open --hot",
+    "build": "cross-env NODE_ENV=production webpack -p --config ./config/webpack/webpack.prod.js",
     "lint:eslint": "eslint . && echo \"No lint errors!\" && exit 0",
     "lint:eslint:fix": "eslint . --fix && echo \"Lint errors fixed!\" && exit 0",
     "format": "prettier \"**/*.{md,mdx,yml,css,scss} \" --write",
@@ -39,6 +39,7 @@
     "compression-webpack-plugin": "^3.0.0",
     "cross-env": "^5.2.0",
     "css-loader": "^3.0.0",
+    "dotenv-webpack": "^1.7.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.3.0",

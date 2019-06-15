@@ -1,10 +1,11 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const path = require('path')
+const Dotenv = require('dotenv-webpack')
 
 // Configure html-webpack-plugin.
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
-  template: path.join(__dirname, "./public/index.html"),
-  filename: path.join(__dirname, "./dist/index.html")
+  template: path.join(process.cwd(), "./public/index.html"),
+  filename: path.join(process.cwd(), "./dist/index.html")
 })
 
 // Configure status logs while build.
@@ -20,9 +21,9 @@ const statsConfig = {
 }
 
 module.exports = {
-  entry: path.join(__dirname, './index.js'),
+  entry: path.join(process.cwd(), './index.js'),
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(process.cwd(), 'dist'),
     filename: 'index.js',
   },
   module: {
@@ -57,6 +58,9 @@ module.exports = {
   },
   plugins: [
     htmlWebpackPlugin,
+    new Dotenv({
+      path: path.resolve(process.cwd(), `config/${process.env.NODE_ENV}.env`),
+    }),
   ],
   stats: statsConfig,
 }
