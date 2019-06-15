@@ -6,17 +6,24 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --mode development --open --hot",
     "build": "cross-env NODE_ENV=production webpack -p --config webpack.prod.js",
-    "lint": "eslint ./ --fix && echo \"No eslint errors!\"",
+    "lint:eslint": "eslint . && echo \"No lint errors!\" && exit 0",
+    "lint:eslint:fix": "eslint . --fix && echo \"Lint errors fixed!\" && exit 0",
+    "format": "prettier \"**/*.{md,mdx,yml,css,scss} \" --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "rishichawda",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/rishichawda/minimal-react-boilerplate"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
-  },
-  "repository": {
-    "url": "https://github.com/rishichawda/minimal-react-boilerplate"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -35,10 +42,14 @@
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^2.4.1",
+    "lint-staged": "^8.2.1",
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "prettier": "^1.18.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.1.3",

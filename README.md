@@ -6,15 +6,17 @@
 
 A minimal react boilerplate with webpack 4, babel v7 and sass support.
 
-* All the good things from Webpack 4 including faster builds.
-* Babel 7.
-* ESLint ( with prettier config :tada: ) - give the configuration a shot and thank me later. And [Dan Abramov](https://github.com/gaearon) too - since I got the idea from him.
+- All the good things from Webpack 4 including faster builds.
+- Babel 7.
+- ESLint ( with prettier config :tada: ) - give the configuration a shot and thank me later. And [Dan Abramov](https://github.com/gaearon) too - since I got the idea from him.
 
-  This also means no unnecessary semi-colons in your files! 
-* SASS support.
-* Easy and cleaner imports.
-  
-  For example, if you have a directory structure like this: 
+  This also means no unnecessary semi-colons in your files!
+
+- SASS support.
+- Easy and cleaner imports.
+
+  For example, if you have a directory structure like this:
+
   ```
   src
   -- components
@@ -24,28 +26,28 @@ A minimal react boilerplate with webpack 4, babel v7 and sass support.
   ---- home
   ------ index.js
   ```
-  
-  You can import `secret-config.js` in `index.js` as :
-  ```jsx
-  import config from 'config/secret-config.js';
-  ```
 
+  You can import `secret-config.js` in `index.js` as :
+
+  ```jsx
+  import config from "config/secret-config.js";
+  ```
 
 ## Usage :
 
-1. Clone the repository via *SSH* :
+1. Clone the repository via _SSH_ :
 
 ```
 $ git clone git@github.com:rishichawda/minimal-react-boilerplate.git
 ```
 
-or *HTTPS* :
+or _HTTPS_ :
 
 ```
 $ git clone https://github.com/rishichawda/minimal-react-boilerplate.git
 ```
 
-2. 
+2.
 
 ```
 $ cd minimal-react-boilerplate
@@ -54,7 +56,7 @@ $ npm install
 
 #### Unfamiliar with git?
 
-Simply click [here](https://github.com/rishichawda/minimal-react-boilerplate/archive/master.zip) to download the zip. Extract the *.zip* file and run the following commands inside the directory.
+Simply click [here](https://github.com/rishichawda/minimal-react-boilerplate/archive/master.zip) to download the zip. Extract the _.zip_ file and run the following commands inside the directory.
 
 ```
 $ npm install
@@ -63,13 +65,13 @@ $ npm run start
 
 ##
 
-To start the development server : 
+To start the development server :
 
 ```
 $ npm run start
 ```
 
-To generate production build : 
+To generate production build :
 
 ```
 $ npm run build
