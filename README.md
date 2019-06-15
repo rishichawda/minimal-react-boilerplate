@@ -1,37 +1,42 @@
 ## minimal-react-boilerplate
 
-![](https://img.shields.io/github/languages/code-size/rishichawda/minimal-react-boilerplate.svg?style=for-the-badge)
-![](https://img.shields.io/david/rishichawda/minimal-react-boilerplate.svg?style=for-the-badge)
-![](https://img.shields.io/david/dev/rishichawda/minimal-react-boilerplate.svg?style=for-the-badge)
+![](https://img.shields.io/github/package-json/v/rishichawda/minimal-react-boilerplate.svg?style=popout-square)
+![](https://img.shields.io/github/last-commit/rishichawda/minimal-react-boilerplate/master.svg?style=popout-square)
+![](https://img.shields.io/david/rishichawda/minimal-react-boilerplate.svg?style=popout-square)
+![](https://img.shields.io/david/dev/rishichawda/minimal-react-boilerplate.svg?style=popout-square)
+![](https://img.shields.io/travis/rishichawda/minimal-react-boilerplate.svg?style=popout-square)
 
 A minimal react boilerplate with webpack 4, babel v7 and sass support.
 
-- All the good things from Webpack 4 including faster builds.
-- Babel 7.
-- ESLint ( with prettier config :tada: ) - give the configuration a shot and thank me later. And [Dan Abramov](https://github.com/gaearon) too - since I got the idea from him.
+- **Webpack 4** - All the good things from Webpack 4 including faster builds.
+- **Babel 7**
+- **ESLint ( with prettier config )** - give the configuration a shot and thank me later. :smile:
+- **Husky** - Pre-commit lint check for staged files to ensure :poop:-code is never commited.
+- **CSS and SASS support.**
 
-  This also means no unnecessary semi-colons in your files!
+- **Easy and cleaner imports with [babel module resolver](https://github.com/tleunen/babel-plugin-module-resolver).**
 
-- SASS support.
-- Easy and cleaner imports.
+For example, if you have a directory structure like this:
 
-  For example, if you have a directory structure like this:
+```
+src
+-- components
+-- config
+---- secret-config.js
+-- pages
+---- home
+------ index.js
+```
 
-  ```
-  src
-  -- components
-  -- config
-  ---- secret-config.js
-  -- pages
-  ---- home
-  ------ index.js
-  ```
+You can import `secret-config.js` in `index.js` as :
 
-  You can import `secret-config.js` in `index.js` as :
+```jsx
+import config from "config/secret-config.js";
+```
 
-  ```jsx
-  import config from "config/secret-config.js";
-  ```
+- **Environment files** - environment variable imports are already configured and added! Just create `development.env` and `production.env` ( inside config directory ) with your environment variables and start using them in your app! :tada:
+
+- **Snapshots and DOM testing** - Includes DOM testing with Jest and react-testing-library and also includes snapshot test examples with Jest. ( _**Bonus:** CI configuration included for TravisCI_ )
 
 ## Usage :
 
