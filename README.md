@@ -36,7 +36,7 @@ import config from "config/secret-config.js";
 
 - **Environment files** - environment variable imports are already configured and added! Just create `development.env` and `production.env` ( inside config directory ) with your environment variables and start using them in your app! :tada:
 
-- **Snapshots and DOM testing** - Includes DOM testing with Jest and react-testing-library and also includes snapshot test examples with Jest. ( _**Bonus:** CI configuration included for TravisCI_ )
+- **Snapshots and DOM testing** - Includes DOM testing with [Jest](https://jestjs.io) and [react-testing-library](https://github.com/testing-library/react-testing-library) and also includes snapshot test examples with Jest. `travis.yml` is already included to run the tests on [TravisCI]().
 
 ## Usage :
 
