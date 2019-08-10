@@ -2,8 +2,7 @@
 
 ![](https://img.shields.io/github/package-json/v/rishichawda/minimal-react-boilerplate.svg?style=popout-square)
 ![](https://img.shields.io/github/last-commit/rishichawda/minimal-react-boilerplate/master.svg?style=popout-square)
-![](https://img.shields.io/david/rishichawda/minimal-react-boilerplate.svg?style=popout-square)
-![](https://img.shields.io/david/dev/rishichawda/minimal-react-boilerplate.svg?style=popout-square)
+![](https://flat.badgen.net/dependabot/dependabot/dependabot-core/?icon=dependabot)
 ![](https://img.shields.io/travis/rishichawda/minimal-react-boilerplate.svg?style=popout-square)
 
 A minimal react boilerplate with webpack 4, babel v7 and sass support.
