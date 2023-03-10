@@ -1,38 +1,25 @@
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const merge = require('webpack-merge')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const { merge } = require('webpack-merge')
 const common = require('./webpack.common.js')
 
-
-// Splitchunks configuration.
-const splitChunks = {
-  cacheGroups: {
-    default: false,
-    commons: {
-      test: /[\\/]node_modules[\\/]/,
-      name: 'vendor_app',
-      chunks: 'all',
-      minChunks: 2,
-    },
-  },
-}
-
 module.exports = merge(common, {
-   devtool: '',
-   mode: 'production',
-   optimization: {
+  mode: 'production',
+  optimization: {
+    moduleIds: 'deterministic',
+    minimize: true,
     minimizer: [
-      new UglifyJSPlugin({
-        sourceMap: true,
-        uglifyOptions: {
-          compress: {
-            inline: false
-          }
-        }
+      new TerserPlugin({
+        parallel: true,
+        terserOptions: {
+          compress: true,
+          output: {
+            comments: false,
+          },
+        },
+        extractComments: false,
       }),
       new OptimizeCSSAssetsPlugin({}),
     ],
-    runtimeChunk: false,
-    splitChunks,
   },
 })
