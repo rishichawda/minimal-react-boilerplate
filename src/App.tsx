@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import './App.scss'
+import './App.scss';
 
 const App = () => (
   <div className="app">
@@ -8,4 +8,4 @@ const App = () => (
   </div>
 )
 
-export default App
+export default App;
