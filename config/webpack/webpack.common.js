@@ -21,40 +21,30 @@ const statsConfig = {
 }
 
 module.exports = {
-  entry: path.join(process.cwd(), './index.js'),
+  entry: path.join(process.cwd(), 'src/index.tsx'),
   output: {
     path: path.join(process.cwd(), 'dist'),
     filename: 'index.js',
   },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js", ".json"]
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
-      {
-        test: /\.jsx$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
+        test: /\.tsx?$/,
+        use: ["ts-loader"],
+        exclude: /node_modules/
       },
       {
         test: /\.s?css$/,
-        use: [
-            "style-loader",
-            "css-loader",
-            "sass-loader"
-        ]
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: /.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
-        use: 'url-loader',
-      },
-    ],
+        use: "url-loader"
+      }
+    ]
   },
   plugins: [
     htmlWebpackPlugin,
