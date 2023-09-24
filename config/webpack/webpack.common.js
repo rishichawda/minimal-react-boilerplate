@@ -10,14 +10,12 @@ process.env.NODE_ENV = DEV ? 'development' : 'production';
 const loaders = {
   rules: [
     {
-      test: /\.jsx?$/,
+      test: /\.js(x)?$/,
       exclude: /node_modules/,
-      use: {
-        loader: 'babel-loader',
-      },
+      loader: 'babel-loader'
     },
     {
-      test: /\.tsx?$/,
+      test: /\.ts(x)?$/,
       exclude: /node_modules/,
       loader: 'ts-loader'
     },
@@ -45,22 +43,19 @@ const config = {
     filename: '[name].[contenthash].js',
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', 'jsx'],
+    extensions: ['.tsx', '.ts', '.js'],
   },
   module: loaders,
   plugins: [
     new HtmlWebPackPlugin({
       template: path.join(process.cwd(), "./public/index.html"),
-      filename: path.join(process.cwd(), "./dist/index.html")
+      filename: "index.html"
+    }),
+    new Dotenv({
+      path: path.resolve(process.cwd(), `config/${process.env.NODE_ENV}.env`),
     }),
     new CleanWebpackPlugin(),
-  ],
+  ]
 }
 
-module.exports = () => {
-  const dotenv = new Dotenv({
-    path: path.resolve(process.cwd(), `config/${process.env.NODE_ENV}.env`),
-  })
-  config.plugins.push(dotenv)
-  return config
-}
+module.exports = config
