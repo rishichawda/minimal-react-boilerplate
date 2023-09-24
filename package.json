@@ -1,6 +1,6 @@
 {
   "name": "minimal-react-boilerplate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A minimal react boilerplate with webpack, babel and sass support.",
   "main": "index.js",
   "scripts": {
