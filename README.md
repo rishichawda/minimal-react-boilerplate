@@ -1,13 +1,11 @@
 ## minimal-react-boilerplate
 
-![](https://img.shields.io/github/package-json/v/rishichawda/minimal-react-boilerplate.svg?style=popout-square)
-![](https://img.shields.io/github/last-commit/rishichawda/minimal-react-boilerplate/master.svg?style=popout-square)
-![](https://flat.badgen.net/dependabot/dependabot/dependabot-core/?icon=dependabot)
-![](https://img.shields.io/travis/rishichawda/minimal-react-boilerplate.svg?style=popout-square)
+![](https://img.shields.io/github/package-json/v/rishichawda/minimal-react-boilerplate.svg?style=for-the-badge)
+![](https://img.shields.io/github/last-commit/rishichawda/minimal-react-boilerplate?style=for-the-badge)
 
-A minimal react boilerplate with webpack 4, babel v7 and sass support.
+A minimal react boilerplate with webpack 5, babel v7 and SASS support.
 
-- **Webpack 4** - All the good things from Webpack 4 including faster builds.
+- **Webpack 5** - All the good things from Webpack 5 including faster builds, smaller build sizes and more.
 - **Babel 7**
 - **ESLint ( with prettier config )** - give the configuration a shot and thank me later. :smile:
 - **Husky** - Pre-commit lint check for staged files to ensure :poop:-code is never commited.
